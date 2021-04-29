@@ -14,10 +14,6 @@ RUN apt-get update \
                        libxslt1-dev \
                        zlib1g-dev \
                        build-essential \
-                       gstreamer1.0-alsa \
-                       gstreamer1.0-plugins-bad \
-                       gstreamer1.0-plugins-good \
-                       gstreamer1.0-plugins-ugly \
                        python3-dbus \
                        python3-dev \
                        python3-gst-1.0 \
@@ -46,7 +42,7 @@ COPY mopidy.conf /root/.config/mopidy/
 
 VOLUME ["/root/.cache/mopidy", "/root/.local/share/mopidy"]
 
-ENV TZ=Europe/London
+ENV TZ=America/Toronto
 
 EXPOSE 6600 6680
 
