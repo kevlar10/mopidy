@@ -42,7 +42,8 @@ RUN apt-get update \
 # && apt-get install -y git \
 # && rm -rf /var/lib/apt/lists/*
 
-COPY requirements.txt requirements.txt snapserver_0.24.0-1_amd64.deb
+COPY requirements.txt requirements.txt
+COPY snapserver_0.24.0-1_amd64.deb snapserver_0.24.0-1_amd64.deb
 
 RUN pip3 install -r requirements.txt \
  && rm -rf ~/.cache/pip
