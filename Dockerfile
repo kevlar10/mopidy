@@ -23,7 +23,18 @@ RUN apt-get update \
                        python3-wheel \
                        libasound2-dev \
                        libspotify-dev \
-                       dleyna-server \
+                       libavahi-client3 \
+                       libavahi-common3 \
+                       libc6 \
+                       libexpat1 \
+                       libflac8 \
+                       libgcc1 \
+                       libogg0 \
+                       libopus0 \
+                       libsoxr0 \
+                       libstdc++6 \
+                       libvorbis0a \
+                       libvorbisenc2 \
  && rm -rf /var/lib/apt/lists/*
 
 # Add git to get some Mopidy stuff straight from Github
