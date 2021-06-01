@@ -1,18 +1,17 @@
 My Mopidy Setup
 ===============
 
-This is the Docker image that I'm currently using to run [Mopidy](https://www.mopidy.com/) on a Raspberry Pi Zero with
-[PhatDAC](https://shop.pimoroni.com/products/phat-dac).
+This is the Docker image that I'm currently using to run [Mopidy](https://www.mopidy.com/).
 
 It probably won't be exactly the setup you want, but feel free to create a fork for your own setup.
 
 Build on PC
 
-    docker build --pull -t jjok/mopidy --build-arg BUILD_FROM=debian:stable-slim .
+    docker build --pull -t kevlar10/mopidy --build-arg BUILD_FROM=debian:stable-slim .
 
 Build on Raspberry Pi
 
-    docker build --pull -t jjok/mopidy --build-arg BUILD_FROM=balenalib/rpi-raspbian:latest .
+    docker build --pull -t kevlar10/mopidy --build-arg BUILD_FROM=balenalib/rpi-raspbian:latest .
 
 Run in foreground:
 
@@ -30,7 +29,7 @@ Run in background:
                --device /dev/snd \
                --net=host \
                -d \
-               jjok/mopidy
+               kevlar10/mopidy
 
 View logs:
 
