@@ -30,19 +30,12 @@ RUN apt-get update \
                        dleyna-server \
  && rm -rf /var/lib/apt/lists/*
 
-# Add git to get some Mopidy stuff straight from Github
-#RUN apt-get update \
-# && apt-get install -y git \
-# && rm -rf /var/lib/apt/lists/*
-
 COPY requirements.txt requirements.txt
 
 RUN pip3 install -r requirements.txt \
  && rm -rf ~/.cache/pip
 
 RUN update-ca-certificates --fresh
-
-COPY mopidy.conf /root/.config/mopidy/
 
 VOLUME ["/root/.cache/mopidy", "/root/.local/share/mopidy"]
 
