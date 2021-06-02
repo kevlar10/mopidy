@@ -37,6 +37,8 @@ RUN pip3 install -r requirements.txt \
 
 RUN update-ca-certificates --fresh
 
+COPY mopidy.conf /root/.config/mopidy/
+
 VOLUME ["/root/.cache/mopidy", "/root/.local/share/mopidy"]
 
 ENV TZ=America/Toronto
